@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Coin from './component/coin'
+import './App.css'
 
 
 const App = ()=>{
@@ -19,10 +20,10 @@ const App = ()=>{
     }
   }
   return (
-    <div>
+    <div className="container">
       <Coin face={value}></Coin>
       <div>
-        <button onClick={coinToss}>Toss</button>
+        <button className="button" onClick={coinToss}>Toss</button>
         <h2>out of {count} toss {head} is head and {tail} is tails.</h2>
       </div>
     </div>

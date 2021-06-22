@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.coin{
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  margin: 2rem 0;
+  transform-style: preserve-3d;
 }
 
-@keyframes App-logo-spin {
+.coin div{
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid black; */
+  position: absolute;
+  backface-visibility: hidden;
+  background-size: contain;
+}
+
+.coin .heads{
+  background:url("https://en.numista.com/catalogue/photos/inde/2311-original.jpg") ;
+  background-size: contain;
+}
+
+.coin .tails{
+  background: url("https://en.numista.com/catalogue/photos/inde/3165-original.jpg");
+  background-size: contain;
+  transform: rotateY(-180deg);
+}
+
+.animate-heads {
+  animation: flipHeads 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flipHeads {
   from {
-    transform: rotate(0deg);
+    transform: rotateY(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotateY(1800deg);
+  }
+}
+
+
+.animate-tails {
+  animation: flipTails 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flipTails {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(1620deg);
   }
 }
