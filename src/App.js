@@ -22,9 +22,9 @@ const App = ()=>{
   return (
     <div className="container">
       <Coin face={value}></Coin>
-      <div>
+      <div className="container">
         <button className="button" onClick={coinToss}>Toss</button>
-        <h2>out of {count} toss {head} is head and {tail} is tails.</h2>
+        <h2>Total Tosses : {count}   Heads: {head}  Tails : {tail} </h2>
       </div>
     </div>
 )}
